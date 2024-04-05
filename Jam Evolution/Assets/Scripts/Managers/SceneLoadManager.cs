@@ -38,6 +38,7 @@ public class SceneLoadManager : MonoBehaviour
             yield return new WaitForSecondsRealtime(0.2f);
         }
         loadOperation.allowSceneActivation = true;
+        GameManager.Instance?.Resume();
         _loadingScreen.SetBool("Show", false);
     }
 }
