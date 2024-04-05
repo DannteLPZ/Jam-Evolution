@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class UIMenuHandler : MonoBehaviour
 {
+    public void OpenURL(string url) => Application.OpenURL(url);
+
     public void ShowCanvasGroup(CanvasGroup group)
     {
         group.alpha = 1.0f;
