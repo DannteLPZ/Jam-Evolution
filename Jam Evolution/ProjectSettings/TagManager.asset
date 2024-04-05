@@ -3,9 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - PlayerBasic
-  - PlayerEvolution
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -40,6 +38,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: SeaBackground
+    uniqueID: 3188174667
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

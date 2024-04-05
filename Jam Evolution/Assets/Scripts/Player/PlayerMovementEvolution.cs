@@ -1,13 +1,12 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovementEvolution : MonoBehaviour
 {
     private Rigidbody2D playerRb;
     [SerializeField] private float radius = 0.51f;
-    [SerializeField] private float jumpForce = 10.0f;
+    [SerializeField] private float jumpForce = 9.0f;
     [SerializeField] private float speed = 5.0f; // Velocidad de movimiento del jugador
     public LayerMask groundLayer; // Capa que representa el suelo
 
@@ -18,37 +17,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-         if (gameObject.CompareTag("PlayerBasic"))
-        {
-            BasicMovement();
-        }
-        else if (gameObject.CompareTag("PlayerEvolution"))
-        {
-            MovementEvolution();
-        }
+        MovementEvolution();        
     }
-
-    private void BasicMovement()
-    {
-        // Desactiva la gravedad del Rigidbody2D
-        playerRb.gravityScale = 0;     
-
-        float moveHorizontal = Input.GetAxis("Horizontal");
-        float moveVertical = Input.GetAxis("Vertical");
-
-        // Calcula el vector de movimiento
-        Vector2 movement = new Vector2(moveHorizontal, moveVertical);
-
-        // Normaliza el vector para mantener la misma velocidad en todas las direcciones
-        movement.Normalize();
-
-        // Aplica movimiento al jugador
-        //transform.Translate(movement * speed * Time.deltaTime);
-        //playerRb.velocity = speed * movement;
-        playerRb.AddForce(speed * movement);
-
-    }
-
+  
     private void MovementEvolution()
     {
         // Obtiene entrada de movimiento horizontal
