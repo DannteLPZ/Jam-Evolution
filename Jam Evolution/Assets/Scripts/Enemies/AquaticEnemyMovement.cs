@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class AquaticEnemyMovement : EnemyController
 {
+    [SerializeField] private float _patrolRadius;
     private Vector2 _startPosition;
     private Vector2 _patrolTarget;
     private float _moveSign;

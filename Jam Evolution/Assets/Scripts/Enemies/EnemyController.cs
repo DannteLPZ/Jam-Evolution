@@ -2,7 +2,6 @@
 
 public abstract class EnemyController : MonoBehaviour
 {
-    [SerializeField] protected float _patrolRadius;
     [SerializeField] protected float _patrolSpeed;
     [SerializeField] protected float _chaseSpeed;
 
