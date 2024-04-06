@@ -1,4 +1,4 @@
-public class CellFood: EvolutionItem
+public class ContactFood : EvolutionItem
 {
     void Update()
     {

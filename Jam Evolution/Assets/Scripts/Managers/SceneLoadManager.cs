@@ -30,6 +30,15 @@ public class SceneLoadManager : MonoBehaviour
         StartCoroutine(ShowLoadProgress(loadOperation));
     }
 
+    public void LoadNextScene()
+    {
+        int buildIndex = SceneManager.GetActiveScene().buildIndex + 1;
+        if (buildIndex < SceneManager.sceneCountInBuildSettings)
+            LoadScene(buildIndex);
+        else
+            GameManager.Instance.WinGame();
+    }
+
     private IEnumerator ShowLoadProgress(AsyncOperation loadOperation)
     {
         float randomProgress = 0.0f;

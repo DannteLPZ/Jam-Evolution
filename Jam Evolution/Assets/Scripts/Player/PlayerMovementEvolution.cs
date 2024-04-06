@@ -4,17 +4,36 @@ using UnityEngine;
 
 public class PlayerMovementEvolution : MonoBehaviour
 {
-    private Rigidbody2D playerRb;
-    [SerializeField] private float radius = 0.51f;
-    [SerializeField] private float jumpForce = 9.0f;
-    [SerializeField] private float speed = 5.0f; // Velocidad de movimiento del jugador
-    public LayerMask groundLayer; // Capa que representa el suelo
+    [SerializeField] private float _speed;
+    [SerializeField] private float _jumpForce;
+    [SerializeField] private float _jumpBufferTime;
+    [SerializeField] private Collider2D _groundCheck;
+    [SerializeField] private LayerMask _whatIsGround; 
+
+    private Rigidbody2D _playerRb;
+    private float _moveHorizontal;
+    private float _jumpBufferTimer;
+    private bool _hasInputJump;
 
     void Start()
     {
-        playerRb = GetComponent<Rigidbody2D>();
+        _playerRb = GetComponent<Rigidbody2D>();
     }
 
+    private void Update()
+    {
+        _moveHorizontal = Input.GetAxis("Horizontal");
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            _hasInputJump = true;
+            _jumpBufferTimer = _jumpBufferTime;
+        }
+        if(_hasInputJump == true)
+        {
+            _jumpBufferTimer -= Time.deltaTime;
+            if (_jumpBufferTimer < 0) _hasInputJump = false;
+        }
+    }
     private void FixedUpdate()
     {
         MovementEvolution();        
@@ -22,35 +41,20 @@ public class PlayerMovementEvolution : MonoBehaviour
   
     private void MovementEvolution()
     {
-        // Obtiene entrada de movimiento horizontal
-        float moveHorizontal = Input.GetAxis("Horizontal");
+        _playerRb.velocity = new Vector2(_moveHorizontal * _speed, _playerRb.velocity.y);
 
-        // Calcula el vector de movimiento
-        Vector2 movement = new Vector2(moveHorizontal, 0f);
-
-        // Aplica movimiento horizontal al jugador
-        playerRb.velocity = new Vector2(movement.x * speed, playerRb.velocity.y);
-
-        // Revisa si el jugador está en el suelo para permitir el salto
-        if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
+        if(_hasInputJump && IsGrounded())
         {
-            // Aplica fuerza de salto
-            playerRb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            _playerRb.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
         }
     }
 
     private bool IsGrounded()
     {
         // Lanza un Raycast hacia abajo para detectar si hay suelo debajo del jugador
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, radius, groundLayer);
-        
-        // Si el Raycast golpea algo, significa que el jugador está en el suelo
-        return hit.collider != null;
-    }
+        bool isGrounded = Physics2D.OverlapAreaAll(_groundCheck.bounds.min, _groundCheck.bounds.max, _whatIsGround).Length > 0;
 
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, radius);
+        // Si el Raycast golpea algo, significa que el jugador está en el suelo
+        return isGrounded;
     }
 }

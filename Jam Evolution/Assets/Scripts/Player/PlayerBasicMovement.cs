@@ -22,7 +22,8 @@ public class PlayerBasicMovement : MonoBehaviour
         Vector2 direction = (mousePos - (Vector2)transform.position).normalized;
 
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90.0f;
-        transform.rotation = Quaternion.Euler(angle * Vector3.forward);
+        if(Vector2.Distance(transform.position, mousePos) > 0.2f)
+            transform.rotation = Quaternion.Euler(angle * Vector3.forward);
     }
 
     private void FixedUpdate()

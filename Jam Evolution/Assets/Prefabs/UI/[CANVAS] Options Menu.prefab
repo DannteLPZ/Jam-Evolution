@@ -793,6 +793,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 4205405237153563325}
+        m_TargetAssemblyTypeName: AudioManagerHelper, Assembly-CSharp
+        m_MethodName: PlayClip
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: SFX_UIButton
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UIMenuHandler, Assembly-CSharp
         m_MethodName: ShowCanvasGroup
@@ -1396,6 +1408,7 @@ GameObject:
   - component: {fileID: 4928761645287367528}
   - component: {fileID: 4928761645287367531}
   - component: {fileID: 4928761645287367542}
+  - component: {fileID: 4205405237153563325}
   m_Layer: 0
   m_Name: '[CANVAS] Options Menu'
   m_TagString: Untagged
@@ -1501,6 +1514,18 @@ CanvasGroup:
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
+--- !u!114 &4205405237153563325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4928761645287367533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db984230e5cc0604d95741cb056b60c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4928761645330262123
 GameObject:
   m_ObjectHideFlags: 0

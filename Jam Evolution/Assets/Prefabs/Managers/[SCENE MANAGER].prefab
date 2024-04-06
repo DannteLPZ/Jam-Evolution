@@ -639,6 +639,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8701784684048764659}
   - component: {fileID: 8701784684048764656}
+  - component: {fileID: 1984630396}
   m_Layer: 0
   m_Name: '[SCENE MANAGER]'
   m_TagString: Untagged
@@ -677,3 +678,31 @@ MonoBehaviour:
   _loadingScreen: {fileID: 8701784683939165549}
   _loadingBar: {fileID: 8701784682463891189}
   _onSceneLoaded: {fileID: 11400000, guid: e6b5a71ab839ba6459aa5d6232d742d6, type: 2}
+--- !u!114 &1984630396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8701784684048764658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ae7f33113e47c248bf7f4c2547d76a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameEvent: {fileID: 11400000, guid: e0a4d694b5ae2744bafcd6a6b2e0e16f, type: 2}
+  _unityEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8701784684048764656}
+        m_TargetAssemblyTypeName: SceneLoadManager, Assembly-CSharp
+        m_MethodName: LoadNextScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

@@ -145,6 +145,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1164362290317219658}
   - component: {fileID: 1164362290317219661}
+  - component: {fileID: 1060979325228497520}
   - component: {fileID: 1164362290317219663}
   - component: {fileID: 1164362290317219660}
   - component: {fileID: 199420401}
@@ -185,6 +186,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 92824a1c5536be847b64028a2c74f774, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1060979325228497520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1164362290317219659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db984230e5cc0604d95741cb056b60c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1164362290317219663
@@ -1028,6 +1041,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1060979325228497520}
+        m_TargetAssemblyTypeName: AudioManagerHelper, Assembly-CSharp
+        m_MethodName: PlayClip
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: SFX_UIButton
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1275168279}
         m_TargetAssemblyTypeName: SceneLoadManagerHelper, Assembly-CSharp
         m_MethodName: LoadScene
@@ -1038,6 +1063,30 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1060979325228497520}
+        m_TargetAssemblyTypeName: AudioManagerHelper, Assembly-CSharp
+        m_MethodName: StopClip
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: M_BacteriaLevel
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1060979325228497520}
+        m_TargetAssemblyTypeName: AudioManagerHelper, Assembly-CSharp
+        m_MethodName: PlayClip
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: M_MainMenu
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1275168279
@@ -1586,6 +1635,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1060979325228497520}
+        m_TargetAssemblyTypeName: AudioManagerHelper, Assembly-CSharp
+        m_MethodName: PlayClip
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: SFX_UIButton
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1164362290317219661}
         m_TargetAssemblyTypeName: UIMenuHandler, Assembly-CSharp
         m_MethodName: ShowCanvasGroup
@@ -1926,6 +1987,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1060979325228497520}
+        m_TargetAssemblyTypeName: AudioManagerHelper, Assembly-CSharp
+        m_MethodName: PlayClip
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: SFX_UIButton
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1164362292285926972}
         m_TargetAssemblyTypeName: GameManagerHelper, Assembly-CSharp
         m_MethodName: Resume
@@ -2401,6 +2474,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1060979325228497520}
+        m_TargetAssemblyTypeName: AudioManagerHelper, Assembly-CSharp
+        m_MethodName: PlayClip
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: SFX_UIButton
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 6689527935786696886}
         m_TargetAssemblyTypeName: SceneLoadManagerHelper, Assembly-CSharp
         m_MethodName: ReloadCurrentScene
@@ -2548,6 +2633,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1060979325228497520}
+        m_TargetAssemblyTypeName: AudioManagerHelper, Assembly-CSharp
+        m_MethodName: PlayClip
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: SFX_UIButton
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 2324613715033511851}
         m_TargetAssemblyTypeName: SceneLoadManagerHelper, Assembly-CSharp
         m_MethodName: LoadScene
@@ -2558,6 +2655,30 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1060979325228497520}
+        m_TargetAssemblyTypeName: AudioManagerHelper, Assembly-CSharp
+        m_MethodName: StopClip
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: M_BacteriaLevel
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1060979325228497520}
+        m_TargetAssemblyTypeName: AudioManagerHelper, Assembly-CSharp
+        m_MethodName: PlayClip
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: M_MainMenu
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2324613715033511851
@@ -2830,6 +2951,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1060979325228497520}
+        m_TargetAssemblyTypeName: AudioManagerHelper, Assembly-CSharp
+        m_MethodName: PlayClip
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: SFX_UIButton
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1056387266066328723}
         m_TargetAssemblyTypeName: SceneLoadManagerHelper, Assembly-CSharp
         m_MethodName: LoadScene
@@ -2840,6 +2973,30 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1060979325228497520}
+        m_TargetAssemblyTypeName: AudioManagerHelper, Assembly-CSharp
+        m_MethodName: StopClip
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: M_BacteriaLevel
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1060979325228497520}
+        m_TargetAssemblyTypeName: AudioManagerHelper, Assembly-CSharp
+        m_MethodName: PlayClip
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: M_MainMenu
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1056387266066328723
@@ -3134,17 +3291,81 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4928761644773740499, guid: 2e293759b8a1bfc4ba6c0591030def43, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4928761644773740499, guid: 2e293759b8a1bfc4ba6c0591030def43, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4928761644773740499, guid: 2e293759b8a1bfc4ba6c0591030def43, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4928761644773740499, guid: 2e293759b8a1bfc4ba6c0591030def43, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1164362290317219661}
+      objectReference: {fileID: 7931478893902122258}
     - target: {fileID: 4928761644773740499, guid: 2e293759b8a1bfc4ba6c0591030def43, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1164362290317219661}
     - target: {fileID: 4928761644773740499, guid: 2e293759b8a1bfc4ba6c0591030def43, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1164362290317219661}
+    - target: {fileID: 4928761644773740499, guid: 2e293759b8a1bfc4ba6c0591030def43, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4928761644773740499, guid: 2e293759b8a1bfc4ba6c0591030def43, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayClip
+      objectReference: {fileID: 0}
+    - target: {fileID: 4928761644773740499, guid: 2e293759b8a1bfc4ba6c0591030def43, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: ShowCanvasGroup
+      objectReference: {fileID: 0}
+    - target: {fileID: 4928761644773740499, guid: 2e293759b8a1bfc4ba6c0591030def43, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: HideCanvasGroup
+      objectReference: {fileID: 0}
+    - target: {fileID: 4928761644773740499, guid: 2e293759b8a1bfc4ba6c0591030def43, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManagerHelper, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4928761644773740499, guid: 2e293759b8a1bfc4ba6c0591030def43, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: UIMenuHandler, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4928761644773740499, guid: 2e293759b8a1bfc4ba6c0591030def43, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4928761644773740499, guid: 2e293759b8a1bfc4ba6c0591030def43, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: SFX_UIButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 4928761644773740499, guid: 2e293759b8a1bfc4ba6c0591030def43, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
+      value: 
       objectReference: {fileID: 1164362292222800084}
+    - target: {fileID: 4928761644773740499, guid: 2e293759b8a1bfc4ba6c0591030def43, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 1164362290422361305}
+    - target: {fileID: 4928761644773740499, guid: 2e293759b8a1bfc4ba6c0591030def43, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4928761644773740499, guid: 2e293759b8a1bfc4ba6c0591030def43, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4928761644773740499, guid: 2e293759b8a1bfc4ba6c0591030def43, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.CanvasGroup, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4928761644905051069, guid: 2e293759b8a1bfc4ba6c0591030def43, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -3377,3 +3598,14 @@ CanvasGroup:
   m_CorrespondingSourceObject: {fileID: 4928761645287367542, guid: 2e293759b8a1bfc4ba6c0591030def43, type: 3}
   m_PrefabInstance: {fileID: 6075039031002943407}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7931478893902122258 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4205405237153563325, guid: 2e293759b8a1bfc4ba6c0591030def43, type: 3}
+  m_PrefabInstance: {fileID: 6075039031002943407}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db984230e5cc0604d95741cb056b60c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

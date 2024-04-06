@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4236902586603510420}
   - component: {fileID: 4236902586603510421}
   - component: {fileID: 671369016}
+  - component: {fileID: 6978052284859458156}
   m_Layer: 0
   m_Name: '[AUDIO MANAGER]'
   m_TagString: Untagged
@@ -54,12 +55,6 @@ MonoBehaviour:
     pitch: 1
     loop: 1
     source: {fileID: 0}
-  - name: M_MainMenu
-    clip: {fileID: 8300000, guid: cb5aeb95f58db674482c9569beb3f807, type: 3}
-    volume: 0.5
-    pitch: 1
-    loop: 1
-    source: {fileID: 0}
   - name: M_BacteriaLevel
     clip: {fileID: 8300000, guid: 976d98deacae82142a65e69b5acf5ba3, type: 3}
     volume: 0.5
@@ -68,6 +63,18 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: SFX_Crunch
     clip: {fileID: 8300000, guid: 60fcb9ce04320d840a340c6ab465c517, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: SFX_UIButton
+    clip: {fileID: 8300000, guid: d656fd076284d324f9e6fcda23f9a908, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: SFX_PlayerHit
+    clip: {fileID: 8300000, guid: 318cc02301e089441abbbc0c33f07b74, type: 3}
     volume: 0.5
     pitch: 1
     loop: 0
@@ -98,5 +105,33 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: SFX_Crunch
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &6978052284859458156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4236902586603510423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ae7f33113e47c248bf7f4c2547d76a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameEvent: {fileID: 11400000, guid: 56088995e7c05864fafff69aa4ce40c5, type: 2}
+  _unityEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4236902586603510421}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: SFX_PlayerHit
           m_BoolArgument: 0
         m_CallState: 2

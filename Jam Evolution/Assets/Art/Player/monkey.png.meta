@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 80
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -139,7 +139,91 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: monkey_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 83
+        width: 210
+        height: 175
+      alignment: 9
+      pivot: {x: 0.6, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61acb35cf1b48e747a220932a7a6f9b0
+      internalID: 1271145816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monkey_1
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 81
+        width: 210
+        height: 175
+      alignment: 9
+      pivot: {x: 0.55, y: 0.36}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80cb81449edd44b4ebe6a630ebb512e8
+      internalID: -1742124247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monkey_2
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 73
+        width: 210
+        height: 175
+      alignment: 9
+      pivot: {x: 0.62, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 654877ae3b8577d418592b655a85bbc6
+      internalID: 522328525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monkey_3
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 82
+        width: 210
+        height: 175
+      alignment: 9
+      pivot: {x: 0.6, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e207bd88e82f904408f6c85f624b92a9
+      internalID: 1414147646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -150,7 +234,11 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      monkey_0: 1271145816
+      monkey_1: -1742124247
+      monkey_2: 522328525
+      monkey_3: 1414147646
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

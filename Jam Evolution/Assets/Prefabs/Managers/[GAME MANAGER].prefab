@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 1914405827211879679}
   - component: {fileID: 21875651}
   - component: {fileID: 93315756}
-  - component: {fileID: 668505377}
   m_Layer: 0
   m_Name: '[GAME MANAGER]'
   m_TagString: Untagged
@@ -98,34 +97,6 @@ MonoBehaviour:
       - m_Target: {fileID: 1914405827211879679}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: Resume
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &668505377
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1914405827211879677}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ae7f33113e47c248bf7f4c2547d76a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _gameEvent: {fileID: 11400000, guid: e0a4d694b5ae2744bafcd6a6b2e0e16f, type: 2}
-  _unityEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1914405827211879679}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: WinGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -9,18 +9,14 @@ public abstract class EvolutionItem: MonoBehaviour
     protected virtual void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
-        {
             playerInRange = true;
-        }
     }
 
     protected virtual void OnTriggerExit2D(Collider2D other)
     {
 
         if (other.CompareTag("Player"))
-        {
             playerInRange = false;
-        }
     }
 
     protected void GiveEvolutionPoints()

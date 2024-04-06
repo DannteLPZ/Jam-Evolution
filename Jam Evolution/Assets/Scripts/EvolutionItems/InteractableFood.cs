@@ -1,7 +1,7 @@
 using TMPro;
 using UnityEngine;
 
-public class Banana: EvolutionItem
+public class InteractableFood: EvolutionItem
 {
     [SerializeField] private TMP_Text interactText;
 
@@ -26,9 +26,6 @@ public class Banana: EvolutionItem
     void Update()
     {
         if(playerInRange == true && Input.GetKeyDown(KeyCode.E))
-        {
-            GiveEvolutionPoints();
-        }
-        
+            GiveEvolutionPoints();     
     }
 }
