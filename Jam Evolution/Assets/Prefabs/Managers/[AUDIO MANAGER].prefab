@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4236902586603510420}
   - component: {fileID: 4236902586603510421}
+  - component: {fileID: 671369016}
   m_Layer: 0
   m_Name: '[AUDIO MANAGER]'
   m_TagString: Untagged
@@ -46,4 +47,56 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _musicGroup: {fileID: 1449600945805665962, guid: 91a584d532fc1964c8dd1d9bdcb46c1d, type: 2}
   _sfxGroup: {fileID: -3282856878833467205, guid: 91a584d532fc1964c8dd1d9bdcb46c1d, type: 2}
-  sounds: []
+  sounds:
+  - name: M_MainMenu
+    clip: {fileID: 8300000, guid: cb5aeb95f58db674482c9569beb3f807, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: M_MainMenu
+    clip: {fileID: 8300000, guid: cb5aeb95f58db674482c9569beb3f807, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: M_BacteriaLevel
+    clip: {fileID: 8300000, guid: 976d98deacae82142a65e69b5acf5ba3, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: SFX_Crunch
+    clip: {fileID: 8300000, guid: 60fcb9ce04320d840a340c6ab465c517, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+--- !u!114 &671369016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4236902586603510423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ae7f33113e47c248bf7f4c2547d76a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameEvent: {fileID: 11400000, guid: b9ec20a8c34dc7e489c0637461f97e54, type: 2}
+  _unityEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4236902586603510421}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: SFX_Crunch
+          m_BoolArgument: 0
+        m_CallState: 2

@@ -12,6 +12,7 @@ public class AquaticEnemyMovement : EnemyController
 
     private bool _hitPlayer;
     private bool _bouncedBack;
+    private Vector2 _currentTarget;
 
     private void Start()
     {
@@ -21,31 +22,43 @@ public class AquaticEnemyMovement : EnemyController
         GetPatrolTarget();
     }
 
+    private void Update()
+    {
+        Vector2 direction = (_currentTarget - (Vector2)transform.position).normalized;
+
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90.0f;
+        transform.rotation = Quaternion.Euler(angle * Vector3.forward);
+    }
+
     private void FixedUpdate()
     {
         if (_hitPlayer == true)
         {
-            if(_bouncedBack == false) BounceBack();
+            if (_bouncedBack == false) BounceBack();
+            else _enemyRb.velocity *= 0.9f;
             return;
         }
         if (_playerInRange == false)
         {
             if (Vector2.Distance(transform.position, _patrolTarget) <= 0.01f)
                 GetPatrolTarget();
+            _currentTarget = _patrolTarget;
             MoveToTarget(_patrolTarget, _patrolSpeed);
         }
         else
         {
+            _currentTarget = _target.position;
             MoveToTarget(_target.position, _chaseSpeed);
         }
     }
 
     private void BounceBack()
     {
+        _enemyRb.velocity = Vector3.zero;
         Vector2 direction = (transform.position - _target.position).normalized;
-        _enemyRb.AddForce(3.0f * direction, ForceMode2D.Impulse);
+        _enemyRb.AddForce(1.0f * direction, ForceMode2D.Impulse);
         _bouncedBack = true;
-        Invoke(nameof(ResetPlayerHit), 1.0f);
+        Invoke(nameof(ResetPlayerHit), 0.5f);
     }
 
     

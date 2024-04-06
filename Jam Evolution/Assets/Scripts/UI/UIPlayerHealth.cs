@@ -10,10 +10,10 @@ public class UIPlayerHealth : MonoBehaviour
     private void Start()
     {
         _playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
-        UpdateHealthSlider();
+        UpdateHealthUI();
     }
 
-    public void UpdateHealthSlider()
+    public void UpdateHealthUI()
     {     
         _healthImage.fillAmount = (float)_playerHealth.CurrentHealth / _playerHealth.MaxHealth;
     }

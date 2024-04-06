@@ -2,48 +2,43 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D), typeof(CircleCollider2D))]
 public class PlayerBasicMovement : MonoBehaviour
 {
-    private Rigidbody2D playerRb;
-    [SerializeField] private float radius = 0.51f;
     [SerializeField] private float speed = 2.0f; // Velocidad de movimiento del jugador
     
+    private Rigidbody2D playerRb;
+    float moveVertical;
     void Start()
     {
         playerRb = GetComponent<Rigidbody2D>();
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
-         
-        BasicMovement();
-              
+        moveVertical = Input.GetAxis("Vertical");
+
+        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 direction = (mousePos - (Vector2)transform.position).normalized;
+
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90.0f;
+        transform.rotation = Quaternion.Euler(angle * Vector3.forward);
+    }
+
+    private void FixedUpdate()
+    {   
+        BasicMovement();           
     }
 
     private void BasicMovement()
     {
-        // Desactiva la gravedad del Rigidbody2D
-        playerRb.gravityScale = 0;     
-
-        float moveHorizontal = Input.GetAxis("Horizontal");
-        float moveVertical = Input.GetAxis("Vertical");
-
-        // Calcula el vector de movimiento
-        Vector2 movement = new Vector2(moveHorizontal, moveVertical);
-
-        // Normaliza el vector para mantener la misma velocidad en todas las direcciones
-        movement.Normalize();
-
-        // Aplica movimiento al jugador
-        //transform.Translate(movement * speed * Time.deltaTime);
-        //playerRb.velocity = speed * movement;
-        playerRb.AddForce(speed * movement);
-
+        if(moveVertical == 0)
+            playerRb.velocity *= 0.9f;
+        else
+        {
+            Vector2 speedVector = moveVertical * speed * transform.up.normalized;
+            playerRb.velocity = speedVector;
+            //playerRb.velocity = Vector2.ClampMagnitude(playerRb.velocity, speed);
+        }
     }   
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, radius);
-    }
 }

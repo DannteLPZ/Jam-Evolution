@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
     [Header("Events")]
     [SerializeField] private GameEvent _onPaused;
     [SerializeField] private GameEvent _onResumed;
+    [SerializeField] private GameEvent _onGameLost;
+    [SerializeField] private GameEvent _onGameWon;
 
     public static GameManager Instance;
     private bool _isPaused;
@@ -35,13 +37,29 @@ public class GameManager : MonoBehaviour
 
     public void Pause()
     {
-        Time.timeScale = 0.0f;
+        ChangeTimeScale(0.0f);
+        _isPaused = true;
         _onPaused.Invoke();
     }
 
     public void Resume()
     {
-        Time.timeScale = 1.0f;
+        ChangeTimeScale(1.0f);
+        _isPaused = false;
         _onResumed.Invoke();
     }
+
+    public void LoseGame()
+    {
+        ChangeTimeScale(0.0f);
+        _onGameLost.Invoke();
+    }
+
+    public void WinGame()
+    {
+        ChangeTimeScale(0.0f);
+        _onGameWon.Invoke();
+    }
+
+    private void ChangeTimeScale(float scale) => Time.timeScale = scale;
 }

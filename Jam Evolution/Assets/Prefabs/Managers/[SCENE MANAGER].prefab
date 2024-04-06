@@ -620,7 +620,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 1e00eac1ca2516f4ba08545ff3dd0184, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -676,3 +676,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _loadingScreen: {fileID: 8701784683939165549}
   _loadingBar: {fileID: 8701784682463891189}
+  _onSceneLoaded: {fileID: 11400000, guid: e6b5a71ab839ba6459aa5d6232d742d6, type: 2}

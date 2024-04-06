@@ -6,6 +6,8 @@ public class EvolutionManager : MonoBehaviour
 {
     [SerializeField] private GameEvent increasePoints;
     [SerializeField] private int maxPoints;
+
+    [SerializeField] private GameEvent _onFullPoints;
     private int currentPoints;
     public int CurrentPoints => currentPoints;
     public int MaxPoints => maxPoints;
@@ -30,8 +32,12 @@ public class EvolutionManager : MonoBehaviour
         currentPoints += points;
         increasePoints.Invoke();
         if(currentPoints >= maxPoints)
-        {
-            //logica para terminar nivel
-        }
+            _onFullPoints.Invoke();
     }
+
+    public void ResetPoints()
+    {
+        currentPoints = 0;
+        increasePoints.Invoke();
+    } 
 }

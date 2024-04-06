@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class UIEvolutionBar : MonoBehaviour
 {
-    [SerializeField] private Slider evolutionSlider;
+    [SerializeField] private Image _evolutionBar;
 
     void Start()
     {
@@ -16,7 +16,7 @@ public class UIEvolutionBar : MonoBehaviour
     {
         int currentPoints = EvolutionManager.Instance.CurrentPoints;
         int maxPoints = EvolutionManager.Instance.MaxPoints;
-        evolutionSlider.value = (float)currentPoints / maxPoints;
+        _evolutionBar.fillAmount = (float)currentPoints / maxPoints;
     }
 
 }

@@ -12,8 +12,9 @@ public class PlayerHealth : MonoBehaviour
 
     [Header("Events")]
     [SerializeField] private GameEvent _onTakeDamage;
+    [SerializeField] private GameEvent _onDeath;
 
-    private void Start() => _currentHealth = _maxHealth;
+    private void Awake() => _currentHealth = _maxHealth;
 
     public void TakeDamage(int damage)
     {
@@ -24,6 +25,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void Die()
     {
-
+        _onDeath.Invoke();
+        Destroy(gameObject);
     }
 }

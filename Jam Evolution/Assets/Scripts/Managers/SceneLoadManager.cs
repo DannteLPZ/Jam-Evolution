@@ -8,6 +8,8 @@ public class SceneLoadManager : MonoBehaviour
     [SerializeField] private Animator _loadingScreen;
     [SerializeField] private Slider _loadingBar;
 
+    [SerializeField] private GameEvent _onSceneLoaded;
+
     public static SceneLoadManager Instance;
     private void Awake()
     {
@@ -38,7 +40,7 @@ public class SceneLoadManager : MonoBehaviour
             yield return new WaitForSecondsRealtime(0.2f);
         }
         loadOperation.allowSceneActivation = true;
-        GameManager.Instance?.Resume();
         _loadingScreen.SetBool("Show", false);
+        _onSceneLoaded.Invoke();
     }
 }
