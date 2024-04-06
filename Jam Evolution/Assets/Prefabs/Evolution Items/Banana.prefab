@@ -384,6 +384,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f5ff333e01858e4ebef4eaaeb7a8cf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  points: 10
+  points: 20
   _onPointsGiven: {fileID: 11400000, guid: b9ec20a8c34dc7e489c0637461f97e54, type: 2}
   interactText: {fileID: 7984612289508941448}
