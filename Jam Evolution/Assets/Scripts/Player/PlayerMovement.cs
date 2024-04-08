@@ -6,8 +6,8 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody2D playerRb;
-    public float radius = 0.51f;
-    public float jumpForce = 10.0f;
+    [SerializeField] private float radius = 0.51f;
+    [SerializeField] private float jumpForce = 10.0f;
     [SerializeField] private float speed = 5.0f; // Velocidad de movimiento del jugador
     public LayerMask groundLayer; // Capa que representa el suelo
 
@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
         playerRb = GetComponent<Rigidbody2D>();
     }
 
-    void Update()
+    private void FixedUpdate()
     {
          if (gameObject.CompareTag("PlayerBasic"))
         {
@@ -43,7 +43,10 @@ public class PlayerMovement : MonoBehaviour
         movement.Normalize();
 
         // Aplica movimiento al jugador
-        transform.Translate(movement * speed * Time.deltaTime);
+        //transform.Translate(movement * speed * Time.deltaTime);
+        //playerRb.velocity = speed * movement;
+        playerRb.AddForce(speed * movement);
+
     }
 
     private void MovementEvolution()
